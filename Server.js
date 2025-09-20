@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const mongoose = require("mongoose");
 const multer = require("multer");
@@ -11,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // ---------------- Connect MongoDB ----------------
-mongoose.connect("mongodb://localhost:27017/ev_dashboard", {
+mongoose.connect( process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
