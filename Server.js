@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // ---------------- Connect MongoDB ----------------
-mongoose.connect( process.env.MONGODB_URI, {
+mongoose.connect( "mongodb+srv://hande18pradip:Pradip%4018@cluster0.xoukv2e.mongodb.net/", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
